@@ -94,7 +94,7 @@ class SE3GeodesicLoss(object):
             """
             dist, grad = self.py_func(self.riemannian_dist_grad,
                                       [y_pred, y_true],
-                                      [tf.float64, tf.float64],
+                                      [tf.float32, tf.float32],
                                       name=name,
                                       grad=self.riemannian_grad_op)
             return dist
